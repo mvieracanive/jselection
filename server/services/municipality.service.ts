@@ -14,7 +14,7 @@ class MunicipalityService {
             if (queryParams) {
                 return municipalityMapper.modelsToDto(
                     models
-                    .filter(it => it.nombre.startsWith(queryParams.prefix))
+                    .filter(it => it.nombre.toUpperCase().startsWith(queryParams.prefix.toUpperCase()))
                 )
             }
 
